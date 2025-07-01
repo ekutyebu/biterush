@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'django.contrib.gis',
     'rest_framework',
     'corsheaders',
     'core',
@@ -44,6 +45,9 @@ INSTALLED_APPS = [
     'orders',
     'users',
     'knowledge_graph',
+    'menus',
+    'services',
+    'ai_agent'
 ]
 
 MIDDLEWARE = [
@@ -55,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -89,6 +94,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.contrib.gis.db.backends.spatialite',
     }
 }
 
@@ -133,3 +139,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# GEOS_LIBRARY_PATH = '/nix/store/fgcxrixy3rfgisx5qa28p6jky9rfg7nn-geos-3.11.2/lib/libgeos_c.so.1'
+# GDAL_LIBRARY_PATH = '/nix/store/k4hrlr6a5p2d5gk4l6hfpnf7phd160zj-gdal-3.7.3/lib/libgdal.so.33'
+# SPATIALITE_LIBRARY_PATH = '/nix/store/nyn7c2rvg8q12ms8qj2nwcmw3xmyl6rf-libspatialite-5.1.0/lib/libspatialite.so'

@@ -1,0 +1,2 @@
+djangorestframework
+GDAL==3.7.3
