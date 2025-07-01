@@ -16,7 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ai_agent.views import RestaurantSearchView
+from restaurants.views import RestaurantCreateView
+from menus.views import MenuItemCreateView
+from orders.views import FoodOrderView
+from payments.views import PaymentView
+from users.views import UserProfileView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/restaurants/search/', RestaurantSearchView.as_view(), name='restaurant-search'),
+    path('api/restaurants/create/', RestaurantCreateView.as_view(), name='restaurant-create'),
+    path('api/menu-items/create/', MenuItemCreateView.as_view(), name='menu-item-create'),
+    path('api/orders/', FoodOrderView.as_view(), name='food-order'),
+    path('api/payments/', PaymentView.as_view(), name='payment'),
+    path('api/user-profile/', UserProfileView.as_view(), name='user-profile'),
 ]
