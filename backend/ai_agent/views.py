@@ -10,7 +10,7 @@ import json
 class RestaurantSearchView(APIView):
     def post(self, request):
         query = request.data.get('query', '')
-        api_key = 'your-tavily-api-key'  # Replace with your Tavily API key
+        api_key = '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'  # Replace with your Tavily API key
         # Get user preferences for personalization
         user = request.user
         profile = None
