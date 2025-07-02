@@ -1,0 +1,52 @@
+.restaurant-form, .order-form, .login-form, .signup-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .restaurant-form form, .order-form form, .login-form form, .signup-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .restaurant-form input, .restaurant-form textarea,
+  .order-form input, .order-form textarea,
+  .login-form input, .signup-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .restaurant-form textarea, .order-form textarea {
+    min-height: 100px;
+  }
+  
+  .restaurant-form button, .order-form button, .login-form button, .signup-form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .restaurant-form button:hover, .order-form button:hover, .login-form button:hover, .signup-form button:hover {
+    background-color: #218838;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  @media (max-width: 768px) {
+    .restaurant-form, .order-form, .login-form, .signup-form {
+      padding: 10px;
+    }
+  }
