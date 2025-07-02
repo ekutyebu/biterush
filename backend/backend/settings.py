@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'knowledge_graph',
     'menus',
     'services',
-    'ai_agent'
+    'ai_agent',
+    'payments',
 ]
 
 MIDDLEWARE = [
